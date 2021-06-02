@@ -1,1 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
+body{
+    margin: 0;
+    background-color: black;
+    max-width: 1600px;
+    font-family: 'Chivo',sans-serif;
+    font-size: 18px;
+    
+}
+
+.container{
+    margin: 100px 100px 0 100px;
+    overflow-y:hidden;
+    overflow-x: hidden;
+    
+}
+
+
+
+.publish{
+    color: #54E6AF
+}
+
+.box > h1{
+    font-weight: 100;
+    line-height: 38px;
+    font-size: 42.672px;
+    text-transform: uppercase;
+}
+
+
+
+.box > p{
+    color: #C2CBE5;
+    font-size: 16px;
+    margin-bottom: 80px;
+    
+}
+
+.first_group_img{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.dots{
+    position: relative;
+    right: -1094px;
+    top: -55px;
+    
+}
+
+.box{
+    color: #FFFFFF;
+    position: relative;
+    top: -600px;
+    height: 400px;
+    width: 660px;
+    padding: 100px 100px 0 0;
+    background-color: black;
+    margin-bottom: -400px;
+    
+}
+
+#email{
+    width: 427px;
+    height: 58px;
+    border-radius: 30px;
+    background-color: #2C344B;
+    border: none;
+}
+
+input[type='submit']{
+    padding: 19px;
+    border-radius: 30px;
+    position: absolute;
+    top: 353px;
+    right: 328px;
+    background-color: #54E6AF;
+
+}
+
+.podcasts{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
 
