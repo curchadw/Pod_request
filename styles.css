@@ -1,10 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
-body{
-    margin: 0;
-    background-color: black;
-    max-width: 1600px;
+*{
     font-family: 'Chivo',sans-serif;
+    box-sizing: border-box;
+   
+    
+
+}
+
+body{
+   
+    background-color: #101824;
+    max-width: 1600px;
     font-size: 18px;
+    margin: 0;
+   
+    
     
 }
 
@@ -53,11 +63,12 @@ body{
 .box{
     color: #FFFFFF;
     position: relative;
-    top: -600px;
-    height: 400px;
-    width: 660px;
-    padding: 100px 100px 0 0;
-    background-color: black;
+    top: -599px;
+    left: -100px;
+    height: 490px;
+    width: 850px;
+    padding: 100px;
+    background-color:  #101824;;
     margin-bottom: -400px;
     
 }
@@ -74,8 +85,8 @@ input[type='submit']{
     padding: 19px;
     border-radius: 30px;
     position: absolute;
-    top: 353px;
-    right: 328px;
+    top: 352px;
+    right: 324px;
     background-color: #54E6AF;
 
 }
@@ -85,5 +96,60 @@ input[type='submit']{
     display: flex;
     justify-content: space-between;
 }
+
+
+/* ------Dashboard-------- */
+
+.container_2{
+    display: flex;
+    margin: 0 0;
+}
+
+.feature{
+    display: flex;
+    background-color: #2C344B;
+    width: 66%;
+    height: 25%;
+}
+
+.latest_shows{
+    display: flex;
+}
+
+.main_dashboard{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    color: #FFFFFF;
+    padding: 35px;
+    
+}
+
+
+
+.sidebar{
+    margin-right: 100px;
+    height: 100vh;
+    background-color: black;
+    padding: 30px 10px;
+    font-size: larger;
+
+}
+
+.menu_items > li{
+    list-style: none;
+    color: #FFFFFF;
+    line-height: 40px;
+    padding: 0 20px;
+    cursor:pointer
+}
+
+.menu_items > li:hover{
+   color: grey   
+}
+
+
+
 
 
