@@ -8,31 +8,36 @@
     <link rel="stylesheet" href="styles.css">
     <title>Pod</title>
 </head>
-<body onload='fetch_featured()'>
+<body onload='fetch_all()'>
     <div class="container_2">
       
             <div class="sidebar">
                 <img src="assets/desktop/logo.svg" alt="logo" width='80px'>
                 <div class="side_menu">
                    <ul class='menu_items'>
-                    <li>Home</li>
+                    <li><a href='/dashboard.html'>Home</a></li>
                     <li>Browse</li>
                     <li>Library</li>
                    </ul> 
                 </div>
            </div>
            <div class="main_dashboard">
-                <div class="feature" id='features'></div>
-                
-                <div class="latest_shows">
-                    <h2>Latest</h2>
-                    <div id="shows">
+                <div class="feature_container" id='feature'>
 
-                    </div>
+
+                </div>
+                <h2>Latest</h2>  
+                <div class="latest_shows_container" id='latest_show'>   
+                          
+                    
                 </div>
             </div>
      
     </div>
     <script src="js/script.js"></script>
+    <script>
+        let id = location.search
+        console.log(id)
+    </script>
 </body>
 </html>
