@@ -1,4 +1,4 @@
-const bearer_token = 'BQAi1__fKkR-A3uncY4JLHzRMlw7PkBkvbCAXAe9twvbZV1PGUk6AXrlnfclO_Zwty146pIy-dluBkGAhb3cZ3RzceaJ8n-1xQtZvlWp6hyYSjGgJvzmuWDobHfvJgevTx617X3-vjFU-BRVkto_z5vKW1AmVyBZhjvafBti4dxQSbmfDYof_2etg3ZT52vi-qfKTyoZL_I7Q_RWp8TvuTUlBv9R8oFI65GgMVYp-mYt8pz6azQSFshJOZRqboK8VNobCIHITQ8sVL9BiJx0hV82QUnHLqG2T4-NoWcp'
+const bearer_token = 'BQDCjYfukMryH1Xcxy8oNZV53hPR4h8_GtLxrkcNhBHHjUsbHbu51abTM3oxAa5QIcwWPG4dJ9DGaLlYQO-qVtFor6YTRBj2IhoG7MXXrH0Mows8OvZoRlAtrM2hMvGreMievuv4eDS47KEtP9FHfAhdzhmcXttyp0t99b2k-skX7HVLSA46085EEL4r9hhBFKqZ-9A7pOkg2uOeao5dcjulDSwi7iOzc_FRpMaYLLwcOd0BxGQ8u63Jcb24z06PP1_InqZp7tzoWHYWgI8W1sZMdh5ed9uv478hVzuX'
 const url = `https://api.spotify.com/v1/shows`
 const bearer = 'Bearer ' + bearer_token
 const header = {
@@ -13,14 +13,7 @@ const header = {
 function fetch_featured(){
     
     let show_id = "2nIvarXvvZcp1cePx69x9N"
-    fetch(url+"?ids="+show_id+"&market=US",{
-        method:"GET",
-        headers:{
-            'Authorization': bearer,
-            'Accept':'application/json',
-            'Content-Type':'application/json',
-        }
-    })
+    fetch(url+"?ids="+show_id+"&market=US",header)
     .then((data) => {return data.json()})
     .then((data)=>{console.log(data)
         let res = `<div class='show_container'>

@@ -18,13 +18,12 @@
         <div class="box">
             <h1><span class='publish'>Publish your podcast</span> everywhere.</h1>
             <p>Upload your audio to Pod with a single click. We'll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts, and more!</p>
+            
             <div class='form'>
-                <form action="/dashboard.html">
                 <label for="email">
                     <input type="email" name="email" id="email" placeholder="Email Address">
                 </label>
-                <input type="submit" value="Request Access">
-                </form>
+                <input type="button" value="Login">
             </div>
             <div class="podcasts">
                 <img src="assets/desktop/spotify.svg" alt="Spotify">
@@ -36,5 +35,10 @@
     </div>
 
 <script src="script.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
 </body>
 </html>

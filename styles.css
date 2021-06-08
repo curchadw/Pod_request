@@ -81,13 +81,14 @@ body{
     border: none;
 }
 
-input[type='submit']{
-    padding: 19px;
+input[type='button']{
+    padding: 19px 30px;
     border-radius: 30px;
     position: absolute;
     top: 352px;
     right: 324px;
     background-color: #54E6AF;
+    
 
 }
 
