@@ -70,8 +70,10 @@ const fetch_all = () => {
     multi_fetch()
 }
 
+
+//fetch the individual show
 const get_show =(id)=>{
-    fetch(urlurl+"/"+id+"?market=US",header)
+    fetch(urlurl+"/"+id+"&market=US",header)
     .then((data) => {return data.json()})
     .then((data)=>{
         document.title = "pod - "+data.name;
@@ -86,6 +88,35 @@ const get_show =(id)=>{
         document.getElementById("header-small").innerHTML = `<h3>${data.name}</h3>`;
 
         get_bg();
+    })
+}
+
+
+//fetch the episodes
+const get_episodes = (id)=>{
+    fetch(url+"/"+id+"/episodes&market=US",header)
+    .then((data)=>{return data.json()})
+    .then((data)=>{
+        data.items.forEach(episode =>{
+            let episode_html =`
+            <div class="episode">
+                
+            <img src="${episode.images[1].url}" />
+            <div class="episode__details">
+                <h2>${episode.name}</h2>
+            </div>
+                
+            <div class="audio">
+                <div class="play__button">
+                    <audio src="${episode.audio_preview_url}" controls></audio>
+                </div>
+                <p>Preview</p>
+            </div>
+        </div>
+            `
+
+            document.getElementById('episodes').innerHTML += episode_html;
+        })
     })
 }
 
