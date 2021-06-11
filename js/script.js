@@ -54,6 +54,7 @@ const multi_fetch = () =>{
             <div class='inner_latest_show'>
                 <a href='${show.uri}'><img src='${show.images[1].url}'/></a>
                 <h3>${show.name}</h3>
+                <h5>${show.publisher}</h5>
             </div>
             </div>`
 
@@ -68,3 +69,24 @@ const fetch_all = () => {
     fetch_featured()
     multi_fetch()
 }
+
+const get_show =(id)=>{
+    fetch(urlurl+"/"+id+"?market=US",header)
+    .then((data) => {return data.json()})
+    .then((data)=>{
+        document.title = "pod - "+data.name;
+        let header_html = `<img src ='${data.images[1].url}' id="header-img" />
+                           <div>
+                            <p>PODCAST</p>
+                            <h2>${data.name}</h2>
+                            <h5>${data.publisher}</h5>
+                           </div>`
+
+        document.getElementById("header").innerHTML = header_html;
+        document.getElementById("header-small").innerHTML = `<h3>${data.name}</h3>`;
+
+        get_bg();
+    })
+}
+
+
